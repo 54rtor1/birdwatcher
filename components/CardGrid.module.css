@@ -1,21 +1,36 @@
 .cardGridWrapper {
   margin-bottom: 1rem;
   width: 100%;
-  max-width: 300px;
+  max-width: 333px;
   display: flex;
   flex-direction: column;
 }
 
 .card {
   flex-grow: 1;
+  margin: 1rem;
 }
 
-.cardTitle {
-  font-weight: bold;
-  font-size: 1.2rem;
+.cardGridContainer {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
 }
 
-.cardContent {
-  font-size: 0.9rem;
-  color: #555;
+.cardGridContainer .title-container {
+  margin-bottom: 2rem;
+}
+
+.cardGridContainer .grid-container {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+}
+
+.cardGridContainer .grid-container-wrapper {
+  padding: 2rem;
 }

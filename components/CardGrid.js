@@ -19,15 +19,19 @@ const CardGrid = ({ news }) => {
   };
 
   return (
+
     <div className={styles.cardGridContainer}>
-      <div>
+      <div className="title-container">
         <h1>Card Grid</h1>
-        <div className="p-grid">
-          <DataView value={news} itemTemplate={itemTemplate} layout="grid" rows={20} paginator />
+      </div>
+      <div className="grid-container-wrapper">
+        <div className="grid-container">
+          <DataView value={news} itemTemplate={itemTemplate} layout="grid" rows={12} paginator />
         </div>
       </div>
     </div>
   );
+
 };
 
 export default CardGrid;
