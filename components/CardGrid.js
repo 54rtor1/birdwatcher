@@ -1,29 +1,45 @@
 import React from 'react';
 import { Card } from 'primereact/card';
-import { DataView, DataViewLayoutOptions } from 'primereact/dataview';
-import { Button } from 'primereact/button';
+import { DataView } from 'primereact/dataview';
 
 const CardGrid = ({ news }) => {
   const itemTemplate = (item) => {
     return (
-      <Card title={item.title}>
-        <div className="p-grid p-nogutter">
-          <div className="p-col-12">{item.id}</div>
-        </div>
-      </Card>
+      <div
+        className="p-col-12 p-sm-6 p-md-4 p-lg-3"
+        style={{
+          marginBottom: '1rem',
+          width: '100%',
+          maxWidth: '300px',
+          display: 'flex',
+          flexDirection: 'column',
+        }}
+      >
+        <Card
+          title={item.title}
+          className="card-equal-height"
+          style={{
+            flexGrow: 1,
+          }}
+        >
+          <div style={{ textAlign: 'center' }}>{item.id}</div>
+        </Card>
+      </div>
     );
   };
 
   return (
     <div>
       <h1>Card Grid</h1>
-      <DataView
-        value={news}
-        itemTemplate={itemTemplate}
-        layout="grid"
-        rows={5}
-        paginator
-      />
+      <div className="p-grid">
+        <DataView
+          value={news}
+          itemTemplate={itemTemplate}
+          layout="grid"
+          rows={20}
+          paginator
+        />
+      </div>
     </div>
   );
 };
