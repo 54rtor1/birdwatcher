@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getNews } from '../api/news';
 import CardGrid from '../components/CardGrid';
 import 'primereact/resources/themes/saga-blue/theme.css';
+import '../app/globals.css'
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css';
