@@ -10,7 +10,7 @@ const CardGrid = ({ news }) => {
   const itemTemplate = (item) => {
     return (
       <div className={`${styles.cardGridWrapper} p-col-12 p-sm-6 p-md-4 p-lg-3 p-3` }>
-        <Card css={{ w: "100%", h: "300px" }}>
+        <Card isHoverable variant="flat" css={{ w: "100%", h: "300px" }}>
         <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
         <Col>
         <Text size={12} weight="bold" transform="uppercase" color="#9E9E9E">
@@ -21,14 +21,14 @@ const CardGrid = ({ news }) => {
         </Text>
         </Col>
      </Card.Header>
-    <Card.Body css={{ p: 0, bg: "black"}} >
+    <Card.Body css={{ p: 0, bg: "light-grey"}} >
       <Card.Image
         src={`${item.image}`}
         objectFit="cover"
         width="100%"
         height="100%"
         alt={item.title}
-        style={{ opacity: 0.8 }}
+        style={{ opacity: 0.9 }}
       />
     </Card.Body>
             <div className={styles.cardTitle}>{item.title}</div>
@@ -65,13 +65,13 @@ const CardGrid = ({ news }) => {
               rounded
               css={{ color: "#94f9f0", bg: "#94f9f026" }}
             >
-              <Text
+              <Text  className="text-center"
                 css={{
           textGradient: "45deg, $yellow600 -20%, #F21B3F",
         }}
                 size={12}
                 weight="bold"
-                transform="uppercase"
+              transform="uppercase"
               >
                 Read story
               </Text>
@@ -90,7 +90,7 @@ const CardGrid = ({ news }) => {
     <div className={styles.cardGridContainer}>
       <Spacer y={2} />
       <div className="title-container">
-        <Text h1  css={{
+        <Text h1               className="text-center" css={{
           textGradient: "45deg, $yellow600 -20%, #F21B3F",
         }} size={27}
         >The latest news on the bird world  🪶 </Text>

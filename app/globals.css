@@ -60,11 +60,11 @@ a {
 }
 
 .p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
-  background: hsl(177, 100%, 13%);
+  background: hsl(48, 33%, 94%);
   color:  #F21B3F;
-  background-color:hsl(48, 33%, 94%);
   border-radius: 50%;
 }
+
 .text-xs {
   font-size: 0.60rem !important;
 }

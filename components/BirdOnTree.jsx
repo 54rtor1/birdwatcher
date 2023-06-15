@@ -23,7 +23,7 @@ const BirdOnTree = ({ className }) => {
     '     ,\'\'',
   ];
 
-  return <Figure figure={figure} className={className} />;
+  return <Figure figure={figure}className={className} />;
 };
 
 export default BirdOnTree;

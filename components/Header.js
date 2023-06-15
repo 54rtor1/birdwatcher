@@ -12,16 +12,16 @@ const Header = () => {
   return (
     <div className={styles.header}>
       <div className="card">
-      <div className={classNames(styles.asciiContainer, 'card-container', 'overflow-hidden')}>
+      <div className={classNames(styles.asciiContainer, 'overflow-hidden')}>
           <div className="flex">
             <div className="flex">
-              <Tucans className="" />
+              <Tucans className="font-light" />
             <div className="flex justify-content-center">
-              <Birds className=""  />
+              <Birds className="font-light" />
             </div>
             </div>
             <div className="flex vertical-align-top justify-content-center">
-              <BirdWithFlowers className="" />
+              <BirdWithFlowers className="font-light" />
             </div>
             <div className="flex align-items-center justify-content-center">
               <Chicken className="text-xs"/>

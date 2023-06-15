@@ -11,9 +11,7 @@
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   height: 100vh;
-  text-align: center;
   background-color: hsl(177, 100%, 13%);
 
 }
