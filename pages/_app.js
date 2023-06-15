@@ -6,7 +6,7 @@ import 'primeflex/primeflex.css';
 import Header from '../components/Header';
 import { useRouter } from 'next/router';
 import Home from './index';
-import CardDetails from './CardDetails';
+import CardDetails from './CardDetails/[id]';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
