@@ -39,9 +39,20 @@ body {
   font-family: 'Nunito', sans-serif;
   max-width: 100vw;
   overflow-x: hidden;
+  background-color: black;
 }
 
+.p-grid .grid .p-nogutter .grid-nogutter {
+  background-color: black;
+}
 
+.grid-nogutter {
+  background-color: black;
+}
+.p-paginator {
+  background-color: black;
+  border: 0;
+}
 a {
   color: inherit;
   text-decoration: none;

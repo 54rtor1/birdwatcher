@@ -4,6 +4,8 @@
   max-width: 333px;
   display: flex;
   flex-direction: column;
+  background-color: black;
+
 }
 .cardGridContainer {
   padding: 2rem;
@@ -12,4 +14,6 @@
   align-items: center;
   height: 100vh;
   text-align: center;
+  background-color: black;
+
 }
