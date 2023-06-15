@@ -1,6 +1,6 @@
 import Figure from './Figure';
 
-const Tucans = () => {
+const Tucans = ({className}) => {
   const figure = [
     '                            _..._',
     '                            \\_.._ `\'-.,--,',
@@ -31,7 +31,7 @@ const Tucans = () => {
     '           `'
   ];
 
-  return <Figure figure={figure} />;
+  return <Figure figure={figure} className={className} />;
 };
 
 export default Tucans;

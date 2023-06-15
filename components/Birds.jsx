@@ -1,6 +1,6 @@
 import Figure from './Figure';
 
-const Birds = () => {
+const Birds = ({className}) => {
   const figure = [
     '             )    ',
     '             \\   )   ',
@@ -20,7 +20,7 @@ const Birds = () => {
     '                                           `"=.',
   ];
 
-  return <Figure figure={figure} />;
+  return <Figure figure={figure} className={className}/>;
 };
 
 export default Birds;

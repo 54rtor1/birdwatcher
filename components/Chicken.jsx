@@ -1,6 +1,6 @@
 import Figure from './Figure';
 
-const Chicken = () => {
+const Chicken = ({className}) => {
   const figure = [
     ',-\'__ `-',
     '{,-\'  `. }              ,\')',
@@ -20,7 +20,7 @@ const Chicken = () => {
     '           \'',
   ];
 
-  return <Figure figure={figure} />;
+  return <Figure figure={figure} className={className}/>;
 };
 
 export default Chicken;
