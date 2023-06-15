@@ -106,7 +106,7 @@ const CardGrid = () => {
           size={30}
           weight="medium"
         >
-          The latest news on the bird world 🪶
+          The latest news on the bird world & other friends 🪶
         </Text>
       </div>
       <Spacer y={2} />
