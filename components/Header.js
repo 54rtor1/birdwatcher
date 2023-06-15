@@ -1,11 +1,14 @@
 import React from 'react';
 import styles from './Header.module.css';
+import Figure from './Figure';
 
 const Header = () => {
   return (
-    <header className={styles.header}>
-      <h1 className={styles.title}>Title</h1>
-    </header>
+      <div className={styles.header}>
+        <div className={styles.asciiContainer}>
+          <Figure />
+        </div>
+      </div>
   );
 };
 
