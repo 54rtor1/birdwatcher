@@ -19,10 +19,9 @@ const CardGrid = ({ news }) => {
   };
 
   return (
-
     <div className={styles.cardGridContainer}>
       <div className="title-container">
-        <h1>Card Grid</h1>
+        <h2>Subtitle</h2>
       </div>
       <div className="grid-container-wrapper">
         <div className="grid-container">
@@ -31,7 +30,6 @@ const CardGrid = ({ news }) => {
       </div>
     </div>
   );
-
 };
 
 export default CardGrid;
