@@ -39,25 +39,32 @@ body {
   font-family: 'Nunito', sans-serif;
   max-width: 100vw;
   overflow-x: hidden;
-  background-color: black;
+  background-color: hsl(177, 100%, 13%);
 }
 
 .p-grid .grid .p-nogutter .grid-nogutter {
-  background-color: black;
+  background-color: hsl(177, 100%, 13%);
 }
 
 .grid-nogutter {
-  background-color: black;
+  background-color: hsl(177, 100%, 13%);
 }
 .p-paginator {
-  background-color: black;
+  background-color: hsl(177, 100%, 13%);
   border: 0;
+  color: hsl(48, 33%, 94%);
 }
 a {
   color: inherit;
   text-decoration: none;
 }
 
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+  background: hsl(177, 100%, 13%);
+  color:  #F21B3F;
+  background-color:hsl(48, 33%, 94%);
+  border-radius: 50%;
+}
 .text-xs {
   font-size: 0.60rem !important;
 }

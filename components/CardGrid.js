@@ -16,7 +16,7 @@ const CardGrid = ({ news }) => {
         <Text size={12} weight="bold" transform="uppercase" color="#9E9E9E">
         {item.author}
         </Text>
-        <Text h3 color="white">
+        <Text h3  css={{ fontFamily: 'Nunito, sans-serif', color: 'hsl(48, 33%, 94%)' }}>
           {item.title}
         </Text>
         </Col>
@@ -66,7 +66,9 @@ const CardGrid = ({ news }) => {
               css={{ color: "#94f9f0", bg: "#94f9f026" }}
             >
               <Text
-                css={{ color: "inherit" }}
+                css={{
+          textGradient: "45deg, $yellow600 -20%, #F21B3F",
+        }}
                 size={12}
                 weight="bold"
                 transform="uppercase"
@@ -86,12 +88,14 @@ const CardGrid = ({ news }) => {
 
   return (
     <div className={styles.cardGridContainer}>
-      <Spacer y={1} />
+      <Spacer y={2} />
       <div className="title-container">
-        <Text h2   size={20}
-        > 𓆝 𓆟 𓆞  The best cat news around the globe! /ᐠ - ˕ -マ</Text>
+        <Text h1  css={{
+          textGradient: "45deg, $yellow600 -20%, #F21B3F",
+        }} size={27}
+        >The latest news on the bird world  🪶 </Text>
       </div>
-      <Spacer y={1} />
+      <Spacer y={2} />
       <div className="grid-container-wrapper">
         <div className="grid-container">
           <DataView value={news} itemTemplate={itemTemplate} layout="grid" rows={8} paginator />

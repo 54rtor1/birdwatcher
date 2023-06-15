@@ -7,7 +7,7 @@ export const Card5 = () => (
         <Text size={12} weight="bold" transform="uppercase" color="#9E9E9E">
           Your day your way
         </Text>
-        <Text h3 color="white">
+        <Text h3 color="hsl(48, 33%, 94%)">
           Your checklist for better sleep
         </Text>
       </Col>

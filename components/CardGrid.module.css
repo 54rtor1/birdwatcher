@@ -4,7 +4,7 @@
   max-width: 333px;
   display: flex;
   flex-direction: column;
-  background-color: black;
+  background-color: hsl(177, 100%, 13%);
 
 }
 .cardGridContainer {
@@ -14,6 +14,6 @@
   align-items: center;
   height: 100vh;
   text-align: center;
-  background-color: black;
+  background-color: hsl(177, 100%, 13%);
 
 }
