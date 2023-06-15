@@ -9,11 +9,11 @@ import Home from './index';
 
 
 
-function MyApp() {
+function MyApp({Component, pageProps}) {
   return (
     <div>
       <Header />
-      <Home />
+      <Component {...pageProps} />
     </div>
   );
 }

@@ -58,7 +58,7 @@ const CardGrid = ({ news }) => {
         </Col>
         <Col>
           <Row justify="flex-end">
-            <Link href="/[id]" as={`/${item.id}`} passHref>
+            <Link href={`${item.id}`} passHref>
             <Button
               flat
               auto
