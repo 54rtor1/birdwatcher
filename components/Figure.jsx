@@ -1,17 +1,36 @@
 import React from 'react';
 
-const Figure = () => (
-  <div style={{ fontFamily: 'monospace', whiteSpace: 'pre' }}>
-    <div>.           ／＞　 フ</div>
-    <div>            | 　_　_|</div>
-    <div>          ／` ミ__^ノ</div>
-    <div>         /　　　　 |</div>
-    <div>        /　 ヽ　　 ﾉ      ╱|、</div>
-    <div>       /　　 |　|　|     (˚ˎ 。7</div>
-    <div>／￣|　　 |　|　|          |、˜〵</div>
-    <div>(￣ヽ＿_  ヽ_)__)         じしˍ,)ノ</div>
-    <div>＼二)</div>
-  </div>
-);
+const generateFigure = () => {
+  const figureLines = [
+    '             )    ',
+    '             \\   )   ',
+    '             ()  \\                           )',
+    '                 ()                       )  \\',
+    '                       .-"""-.            \\  ()',
+    '              ____    /  __   `\\     __   ()',
+    "           .'`  __'. | o/__\\o   |   / /|",
+    '          /  o /__\\o;\\  \\\\//   /_  // /',
+    ' ._      _|    \\\\// `-.__.-\'|\\  `;  /',
+    '/  \\   .\'  \\-.____.\'|   ||   |/    \\/',
+    '`._ \'-/                ||   \'.___./',
+    '.  \'-.\\_.-\'      __.\'-._||_.-\' _ /',
+    '.`""===(||).___.(||)(||)----\'(||)===...__',
+    ' `"jgs"`""=====""""========"""====...__  `""==._',
+    '                                       `"=.     `"=.',
+    '                                           `"=.',
+  ];
+
+  return (
+    <div style={{ fontFamily: 'monospace', whiteSpace: 'pre' }}>
+      {figureLines.map((line, index) => (
+        <div key={index}>{line}</div>
+      ))}
+    </div>
+  );
+};
+
+const Figure = () => {
+  return generateFigure();
+};
 
 export default Figure;
