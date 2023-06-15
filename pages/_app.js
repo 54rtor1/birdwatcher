@@ -7,6 +7,8 @@ import Header from '../components/Header';
 import { useRouter } from 'next/router';
 import Home from './index';
 import CardDetails from './CardDetails/[id]';
+import { NewsProvider } from '../contexts/NewsContext';
+
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -17,10 +19,12 @@ function MyApp({ Component, pageProps }) {
   const ComponentToRender = isHomePage ? Home : CardDetails;
 
   return (
+    <NewsProvider>
     <div>
       <Header />
       <ComponentToRender {...pageProps} />
     </div>
+    </NewsProvider>
   );
 }
 

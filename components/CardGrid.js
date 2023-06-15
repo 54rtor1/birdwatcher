@@ -1,10 +1,15 @@
-import React from 'react';
 import { DataView } from 'primereact/dataview';
 import Link from 'next/link';
 import styles from './CardGrid.module.css';
 import { Card, Col, Row, Button, Text, Spacer } from "@nextui-org/react";
+import React, { useContext, useEffect } from 'react';
+import { NewsContext } from '../contexts/NewsContext';
 
-const CardGrid = ({ news }) => {
+
+
+const CardGrid = () => {
+  const { newsData } = useContext(NewsContext);
+  console.log(newsData)
   const itemTemplate = (item) => {
     return (
       <div className={`${styles.cardGridWrapper} p-col-12 p-sm-6 p-md-4 p-lg-3 p-3` }>
@@ -85,6 +90,7 @@ const CardGrid = ({ news }) => {
     );
   };
 
+
   return (
     <div className={styles.cardGridContainer}>
       <Spacer y={2} />
@@ -103,7 +109,7 @@ const CardGrid = ({ news }) => {
       <Spacer y={2} />
       <div className="grid-container-wrapper">
         <div className="grid-container">
-          <DataView value={news} itemTemplate={itemTemplate} layout="grid" rows={8} paginator />
+          <DataView value={newsData} itemTemplate={itemTemplate} layout="grid" rows={8} paginator />
         </div>
       </div>
     </div>

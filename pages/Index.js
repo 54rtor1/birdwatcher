@@ -1,26 +1,27 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useContext } from 'react';
 import { getNews } from '../api/news';
 import CardGrid from '../components/CardGrid';
+import { NewsContext } from '../contexts/NewsContext';
 
 export default function Home() {
-  const [news, setNews] = useState([]);
+  const { setNewsData } = useContext(NewsContext);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const data = await getNews();
-        setNews(data);
+        setNewsData(data);
       } catch (error) {
         console.error(error);
       }
     };
 
     fetchData();
-  }, []);
+  }, [setNewsData]);
 
   return (
     <div>
-      <CardGrid news={news} />
+      <CardGrid />
     </div>
   );
 }

@@ -7,6 +7,9 @@
   },
   "dependencies": {
     "@nextui-org/react": "^1.0.0-beta.13",
+    "@react-aria/grid": "^3.7.1",
+    "@react-aria/menu": "^3.9.1",
+    "@react-aria/overlays": "^3.14.1",
     "classnames": "^2.3.2",
     "next": "latest",
     "primeflex": "^3.3.1",
