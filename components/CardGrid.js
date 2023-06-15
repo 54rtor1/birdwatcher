@@ -46,16 +46,10 @@ const CardGrid = ({ news }) => {
       <Row>
         <Col>
           <Row>
-            <Col span={3}>
-              <Card.Image
-                src="https://nextui.org/images/breathing-app-icon.jpeg"
-                css={{ bg: "black", br: "50%" }}
-                height={40}
-                width={40}
-                alt="Breathing app icon"
-              />
-            </Col>
-            <Col>
+            <Col align="start">
+            <Text className="pt-1" color="#d1d1d1" size={12}>
+                posted on:
+              </Text>
               <Text className="pt-1" color="#d1d1d1" size={12}>
                 {item.publish_date}
               </Text>
