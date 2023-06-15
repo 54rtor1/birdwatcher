@@ -4,16 +4,22 @@ import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import 'primeflex/primeflex.css';
 import Header from '../components/Header';
+import { useRouter } from 'next/router';
 import Home from './index';
+import CardDetails from './CardDetails';
 
+function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+  const { pathname } = router;
 
+  const isHomePage = pathname === '/';
 
+  const ComponentToRender = isHomePage ? Home : CardDetails;
 
-function MyApp({Component, pageProps}) {
   return (
     <div>
       <Header />
-      <Component {...pageProps} />
+      <ComponentToRender {...pageProps} />
     </div>
   );
 }
