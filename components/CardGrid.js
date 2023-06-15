@@ -2,14 +2,26 @@ import { DataView } from 'primereact/dataview';
 import Link from 'next/link';
 import styles from './CardGrid.module.css';
 import { Card, Col, Row, Button, Text, Spacer } from "@nextui-org/react";
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useState } from 'react';
 import { NewsContext } from '../contexts/NewsContext';
+import { useRouter } from 'next/router';
+
 
 
 
 const CardGrid = () => {
   const { newsData } = useContext(NewsContext);
-  console.log(newsData)
+  const [selectedItem, setSelectedItem] = useState(null);
+  const router = useRouter();
+
+  const handleItemClick = (item) => {
+    setSelectedItem(item);
+    router.push({
+      pathname: `/CardDetails/${item.id}`,
+      query: { item: JSON.stringify(item) },
+    });
+  };
+
   const itemTemplate = (item) => {
     return (
       <div className={`${styles.cardGridWrapper} p-col-12 p-sm-6 p-md-4 p-lg-3 p-3` }>
@@ -61,12 +73,13 @@ const CardGrid = () => {
               </Col>
               <Col>
                 <Row justify="flex-end">
-                <Link href={`/CardDetails/${item.id}`} passHref>
                     <Button
                       flat
                       auto
                       rounded
                       css={{ color: "#94f9f0", bg: "#94f9f026" }}
+                      key={item.id}
+                      onClick={() => handleItemClick(item)}
                     >
                       <Text
                         className="text-center"
@@ -80,7 +93,6 @@ const CardGrid = () => {
                         Read story
                       </Text>
                     </Button>
-                  </Link>
                 </Row>
               </Col>
             </Row>
