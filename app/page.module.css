@@ -40,6 +40,10 @@
 
 }
 
+.h1 {
+  font-family: 'Poppins', sans-serif !important;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(25%, auto));

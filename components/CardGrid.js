@@ -1,5 +1,4 @@
 import { DataView } from 'primereact/dataview';
-import Link from 'next/link';
 import styles from './CardGrid.module.css';
 import { Card, Col, Row, Button, Text, Spacer } from "@nextui-org/react";
 import React, { useContext, useState } from 'react';
@@ -36,7 +35,7 @@ const CardGrid = () => {
               </Text>
             </Col>
           </Card.Header>
-          <Card.Body css={{ p: 0, bg: "light-grey"}} >
+          <Card.Body css={{ p: 0, bg: "grey"}} >
             <Card.Image
               src={`${item.image}`}
               objectFit="cover"
@@ -74,24 +73,15 @@ const CardGrid = () => {
               <Col>
                 <Row justify="flex-end">
                     <Button
-                      flat
-                      auto
-                      rounded
-                      css={{ color: "#94f9f0", bg: "#94f9f026" }}
+                      size="sm"
+                      color="hsl(48, 33%, 94%)" auto
                       key={item.id}
+                      css={{
+                        opacity: "0.6",
+                      }}
                       onClick={() => handleItemClick(item)}
                     >
-                      <Text
-                        className="text-center"
-                        css={{
-                          textGradient: "45deg, $yellow600 -20%, #F21B3F",
-                        }}
-                        size={12}
-                        weight="bold"
-                        transform="uppercase"
-                      >
-                        Read story
-                      </Text>
+                     <Text>Read Story 𓅯</Text>
                     </Button>
                 </Row>
               </Col>
@@ -105,7 +95,7 @@ const CardGrid = () => {
 
   return (
     <div className={styles.cardGridContainer}>
-      <Spacer y={2} />
+      <Spacer y={1} />
       <div className="title-container">
         <Text
           h1
@@ -113,7 +103,8 @@ const CardGrid = () => {
           css={{
             textGradient: "45deg, $yellow600 -20%, #F21B3F",
           }}
-          size={27}
+          size={30}
+          weight="medium"
         >
           The latest news on the bird world 🪶
         </Text>

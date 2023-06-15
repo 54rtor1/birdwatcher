@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router';
-import { Row, Col, Text, Spacer, Card } from "@nextui-org/react";
-
+import { Row, Col, Text, Spacer, Card, Image, Link, Button } from "@nextui-org/react";
 
 
 const CardDetails = () => {
@@ -12,26 +11,49 @@ const CardDetails = () => {
 
 
   return (
-    <div>
-      <h1>Card Details</h1>
-      {/* <Row>
-        <Col span={6}>
-          <Text h2>{selectedItem.title}</Text>
+    <div className="m-5">
+      <Row>
+        <Col span={4}>
+        <Spacer y={1} />
+          <Text h1 size="40px" className="p-4" color="hsl(48, 33%, 94%)" weight="light">{selectedItem.title}</Text>
+          <Text h3 transform="uppercase" weight="black" className="p-4 vertical-align-bottom" color="hsl(48, 33%, 94%)">BY {selectedItem.author}</Text>
+          <Spacer y={1} />
         </Col>
-        <Col span={6}>
-          <img src={selectedItem.image} alt={selectedItem.title} />
+        <Col span={8}>
+        <Spacer y={1} />
+        <Image
+          src={selectedItem.image}
+          alt={selectedItem.title}
+          objectFit="cover"
+          height={400}
+          css={{
+            borderRadius: "10px",
+          }}
+          />
+          <Spacer y={1} />
         </Col>
       </Row>
       <Spacer y={1} />
       <Row>
         <Col span={12}>
           <Card>
-            <Card.Body>
-              <Text>{selectedItem.text}</Text>
+            <Card.Body css={{
+            backgroundColor: "hsl(48, 33%, 94%)",
+          }}>
+              <Text style={{ fontFamily: 'Bitter'}}className="p-6 m-4 text-justify line-height-3">{selectedItem.text}</Text>
+              <Link className="p-6 mx-4" isExternal block href={selectedItem.url}>
+               Source
+               </Link>
             </Card.Body>
           </Card>
         </Col>
-      </Row> */}
+      </Row>
+      <Spacer y={1} />
+      <Link href='/'>
+      <Button color="hsl(48, 33%, 94%)" auto>
+          <Text>Return 𓅪</Text>
+        </Button>
+      </Link>
     </div>
   );
 };
